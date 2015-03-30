@@ -14,7 +14,7 @@ artifactPath in Compile in genReactFile :=
 genReactFile in Compile := {
   val outFile = (artifactPath in Compile in genReactFile).value
 
-  IO.copyFile((fastOptJS in Compile).value.data, outFile)
+  IO.copyFile((fullOptJS in Compile).value.data, outFile)
 
   val launcher = (scalaJSLauncher in Compile).value.data.content
   IO.append(outFile, launcher)
