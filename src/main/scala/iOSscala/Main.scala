@@ -7,7 +7,6 @@ object Main extends js.JSApp {
   lazy val React = g.require("react-native")
   lazy val View = g.require("View")
   lazy val Text = g.require("Text")
-  lazy val StyleSheet = g.require("StyleSheet")
 
   def main() = {
     val iOSScala = React.createClass(lit(render = () =>
