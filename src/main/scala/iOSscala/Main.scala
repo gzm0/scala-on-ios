@@ -7,10 +7,12 @@ object Main extends js.JSApp {
   lazy val React = g.require("react-native")
   lazy val View = g.require("View")
   lazy val Text = g.require("Text")
+  lazy val StyleSheet = g.require("StyleSheet")
 
   def main() = {
     val iOSScala = React.createClass(lit(render = () =>
-      React.createElement(View, null,
+      React.createElement(View, js.Dynamic.literal(style = js.Dynamic.literal(flex = 1, alignItems = "center", justifyContent = "center",backgroundColor = "#F5FCFF"
+      )),
         React.createElement(Text, null, "Welcome to React Native!"),
         React.createElement(Text, null, "To get started, edit Main.scala")
       )
